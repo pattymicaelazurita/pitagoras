@@ -56,9 +56,9 @@ class ProgresoTable extends Table
             ->notEmptyString('idNivelAlcanzado');
 
         $validator
-            ->dateTime('fecha')
+            ->date('fecha')
             ->requirePresence('fecha', 'create')
-            ->notEmptyDateTime('fecha');
+            ->notEmptyDate('fecha');
 
         $validator
             ->integer('puntajeActual')

@@ -29,7 +29,7 @@ class TutorFixture extends TestFixture
                 'nombre' => 'Lorem ipsum dolor sit amet',
                 'contrasenia' => 'Lorem ipsum dolor sit amet',
                 'correo' => 'Lorem ipsum dolor sit amet',
-                'fechaNacimiento' => '2022-11-13 07:59:37',
+                'fechaNacimiento' => '2022-11-13',
                 'cedula' => 'Lorem ips',
             ],
         ];

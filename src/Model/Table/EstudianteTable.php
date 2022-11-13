@@ -66,12 +66,13 @@ class EstudianteTable extends Table
             ->scalar('correo')
             ->maxLength('correo', 255)
             ->requirePresence('correo', 'create')
-            ->notEmptyString('correo');
+            ->notEmptyString('correo')
+            ->add('correo', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
-            ->dateTime('fechaNacimiento')
+            ->date('fechaNacimiento')
             ->requirePresence('fechaNacimiento', 'create')
-            ->notEmptyDateTime('fechaNacimiento');
+            ->notEmptyDate('fechaNacimiento');
 
         $validator
             ->scalar('cedula')
@@ -85,5 +86,19 @@ class EstudianteTable extends Table
             ->notEmptyString('idTutor');
 
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules): RulesChecker
+    {
+        $rules->add($rules->isUnique(['correo']), ['errorField' => 'correo']);
+
+        return $rules;
     }
 }

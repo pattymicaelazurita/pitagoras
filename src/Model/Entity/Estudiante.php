@@ -12,7 +12,7 @@ use Cake\ORM\Entity;
  * @property string $nombre
  * @property string $contrasenia
  * @property string $correo
- * @property \Cake\I18n\FrozenTime $fechaNacimiento
+ * @property \Cake\I18n\FrozenDate $fechaNacimiento
  * @property string $cedula
  * @property int $idTutor
  */

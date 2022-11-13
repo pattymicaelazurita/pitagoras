@@ -27,7 +27,7 @@ class ProgresoFixture extends TestFixture
             [
                 'idProgreso' => 1,
                 'idNivelAlcanzado' => 1,
-                'fecha' => '2022-11-13 08:00:12',
+                'fecha' => '2022-11-13',
                 'puntajeActual' => 1,
                 'idEstudiante' => 1,
             ],

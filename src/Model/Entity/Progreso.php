@@ -10,7 +10,7 @@ use Cake\ORM\Entity;
  *
  * @property int $idProgreso
  * @property int $idNivelAlcanzado
- * @property \Cake\I18n\FrozenTime $fecha
+ * @property \Cake\I18n\FrozenDate $fecha
  * @property int $puntajeActual
  * @property int $idEstudiante
  */
