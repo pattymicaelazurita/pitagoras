@@ -50,11 +50,11 @@ class EstudianteController extends AppController
         if ($this->request->is('post')) {
             $estudiante = $this->Estudiante->patchEntity($estudiante, $this->request->getData());
             if ($this->Estudiante->save($estudiante)) {
-                $this->Flash->success(__('The estudiante has been saved.'));
+                $this->Flash->success(__('Se ha guardado el estudiante'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The estudiante could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se ha podido guardar el estudiante. Por favor vuelve a intentarlo.'));
         }
         $this->set(compact('estudiante'));
     }
@@ -74,11 +74,11 @@ class EstudianteController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $estudiante = $this->Estudiante->patchEntity($estudiante, $this->request->getData());
             if ($this->Estudiante->save($estudiante)) {
-                $this->Flash->success(__('The estudiante has been saved.'));
+                $this->Flash->success(__('Se ha actualizado el estudiante'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The estudiante could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se ha podido actualizar el estudiante. Por favor vuelve a intentarlo.'));
         }
         $this->set(compact('estudiante'));
     }
@@ -95,9 +95,9 @@ class EstudianteController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $estudiante = $this->Estudiante->get($id);
         if ($this->Estudiante->delete($estudiante)) {
-            $this->Flash->success(__('The estudiante has been deleted.'));
+            $this->Flash->success(__('Se ha eliminado el estudiante'));
         } else {
-            $this->Flash->error(__('The estudiante could not be deleted. Please, try again.'));
+            $this->Flash->error(__('No se ha podido eliminar el estudiante. Por favor vuelve a intentarlo.'));
         }
 
         return $this->redirect(['action' => 'index']);

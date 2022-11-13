@@ -5,20 +5,20 @@
  */
 ?>
 <div class="estudiante index content">
-    <?= $this->Html->link(__('New Estudiante'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Nuevo Estudiante'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Estudiante') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('idEstudiante') ?></th>
-                    <th><?= $this->Paginator->sort('nombre') ?></th>
-                    <th><?= $this->Paginator->sort('contrasenia') ?></th>
-                    <th><?= $this->Paginator->sort('correo') ?></th>
-                    <th><?= $this->Paginator->sort('fechaNacimiento') ?></th>
-                    <th><?= $this->Paginator->sort('cedula') ?></th>
-                    <th><?= $this->Paginator->sort('idTutor') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th><?= $this->Paginator->sort('id Estudiante') ?></th>
+                    <th><?= $this->Paginator->sort('Nombre') ?></th>
+                    <th><?= $this->Paginator->sort('Contraseña') ?></th>
+                    <th><?= $this->Paginator->sort('Correo') ?></th>
+                    <th><?= $this->Paginator->sort('Fecha de Nacimiento') ?></th>
+                    <th><?= $this->Paginator->sort('Cédula') ?></th>
+                    <th><?= $this->Paginator->sort('id Tutor') ?></th>
+                    <th class="actions"><?= __('Opciones') ?></th>
                 </tr>
             </thead>
             <tbody>
@@ -32,9 +32,9 @@
                     <td><?= h($estudiante->cedula) ?></td>
                     <td><?= $this->Number->format($estudiante->idTutor) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $estudiante->idEstudiante]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $estudiante->idEstudiante]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $estudiante->idEstudiante], ['confirm' => __('Are you sure you want to delete # {0}?', $estudiante->idEstudiante)]) ?>
+                        <?= $this->Html->link(__('Ver'), ['action' => 'view', $estudiante->idEstudiante]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $estudiante->idEstudiante]) ?>
+                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $estudiante->idEstudiante], ['confirm' => __('¿Está seguro que desea eliminar al estudiante # {0}?', $estudiante->idEstudiante)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -43,12 +43,12 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('primero')) ?>
+            <?= $this->Paginator->prev('< ' . __('previo')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('siguiente') . ' >') ?>
+            <?= $this->Paginator->last(__('último') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Página {{page}} de {{pages}}')) ?></p>
     </div>
 </div>

@@ -7,15 +7,15 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Estudiante'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <h4 class="heading"><?= __('Opciones') ?></h4>
+            <?= $this->Html->link(__('Lista de Estudiantes'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
         <div class="estudiante form content">
             <?= $this->Form->create($estudiante) ?>
             <fieldset>
-                <legend><?= __('Add Estudiante') ?></legend>
+                <legend><?= __('Agregar Estudiante') ?></legend>
                 <?php
                     echo $this->Form->control('nombre');
                     echo $this->Form->control('contrasenia');
@@ -25,7 +25,7 @@
                     echo $this->Form->control('idTutor');
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Agregar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>
