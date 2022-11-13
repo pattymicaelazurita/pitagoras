@@ -50,11 +50,11 @@ class ProgresoController extends AppController
         if ($this->request->is('post')) {
             $progreso = $this->Progreso->patchEntity($progreso, $this->request->getData());
             if ($this->Progreso->save($progreso)) {
-                $this->Flash->success(__('The progreso has been saved.'));
+                $this->Flash->success(__('Se ha guardado el progreso'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The progreso could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se ha podido guardar el progreso. Por favor vuelva a intentarlo'));
         }
         $this->set(compact('progreso'));
     }
@@ -74,11 +74,11 @@ class ProgresoController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $progreso = $this->Progreso->patchEntity($progreso, $this->request->getData());
             if ($this->Progreso->save($progreso)) {
-                $this->Flash->success(__('The progreso has been saved.'));
+                $this->Flash->success(__('Se ha actualizado el progreso'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The progreso could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se ha podido actualizar el progreso. Por favor vuelva a intentarlo'));
         }
         $this->set(compact('progreso'));
     }
@@ -95,9 +95,9 @@ class ProgresoController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $progreso = $this->Progreso->get($id);
         if ($this->Progreso->delete($progreso)) {
-            $this->Flash->success(__('The progreso has been deleted.'));
+            $this->Flash->success(__('Se ha eliminado el progreso'));
         } else {
-            $this->Flash->error(__('The progreso could not be deleted. Please, try again.'));
+            $this->Flash->error(__('No se ha podido eliminar el progreso. Por favor vuelva a intentarlo.'));
         }
 
         return $this->redirect(['action' => 'index']);
