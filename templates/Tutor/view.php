@@ -7,11 +7,11 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Tutor'), ['action' => 'edit', $tutor->idTutor], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Tutor'), ['action' => 'delete', $tutor->idTutor], ['confirm' => __('Are you sure you want to delete # {0}?', $tutor->idTutor), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Tutor'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Tutor'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <h4 class="heading"><?= __('Opciones') ?></h4>
+            <?= $this->Html->link(__('Editar Tutor'), ['action' => 'edit', $tutor->idTutor], ['class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('Eliminar Tutor'), ['action' => 'delete', $tutor->idTutor], ['confirm' => __('¿Está seguro que quiere eliminar al tutor # {0}?', $tutor->idTutor), 'class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Lista de Tutores'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Nuevo Tutor'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -23,7 +23,7 @@
                     <td><?= h($tutor->nombre) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Contrasenia') ?></th>
+                    <th><?= __('Contraseña') ?></th>
                     <td><?= h($tutor->contrasenia) ?></td>
                 </tr>
                 <tr>
@@ -39,7 +39,7 @@
                     <td><?= $this->Number->format($tutor->idTutor) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('FechaNacimiento') ?></th>
+                    <th><?= __('Fecha de Nacimiento') ?></th>
                     <td><?= h($tutor->fechaNacimiento) ?></td>
                 </tr>
             </table>

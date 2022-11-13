@@ -50,11 +50,11 @@ class TutorController extends AppController
         if ($this->request->is('post')) {
             $tutor = $this->Tutor->patchEntity($tutor, $this->request->getData());
             if ($this->Tutor->save($tutor)) {
-                $this->Flash->success(__('The tutor has been saved.'));
+                $this->Flash->success(__('Se ha guardado el tutor'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The tutor could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se ha podido guardar el tutor. Por favor vuelve a intentarlo'));
         }
         $this->set(compact('tutor'));
     }
@@ -74,11 +74,11 @@ class TutorController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $tutor = $this->Tutor->patchEntity($tutor, $this->request->getData());
             if ($this->Tutor->save($tutor)) {
-                $this->Flash->success(__('The tutor has been saved.'));
+                $this->Flash->success(__('Se ha actualizado el tutor'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The tutor could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se ha podido actualizar el tutor. Por favor vuelve a intentarlo'));
         }
         $this->set(compact('tutor'));
     }
@@ -95,9 +95,9 @@ class TutorController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $tutor = $this->Tutor->get($id);
         if ($this->Tutor->delete($tutor)) {
-            $this->Flash->success(__('The tutor has been deleted.'));
+            $this->Flash->success(__('Se ha eliminado el tutor'));
         } else {
-            $this->Flash->error(__('The tutor could not be deleted. Please, try again.'));
+            $this->Flash->error(__('No se ha podido eliminar el tutor. Por favor vuelve a intentarlo'));
         }
 
         return $this->redirect(['action' => 'index']);
