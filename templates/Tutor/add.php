@@ -1,0 +1,31 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Tutor $tutor
+ */
+?>
+<div class="row">
+    <aside class="column">
+        <div class="side-nav">
+            <h4 class="heading"><?= __('Actions') ?></h4>
+            <?= $this->Html->link(__('List Tutor'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+        </div>
+    </aside>
+    <div class="column-responsive column-80">
+        <div class="tutor form content">
+            <?= $this->Form->create($tutor) ?>
+            <fieldset>
+                <legend><?= __('Add Tutor') ?></legend>
+                <?php
+                    echo $this->Form->control('nombre');
+                    echo $this->Form->control('contrasenia');
+                    echo $this->Form->control('correo');
+                    echo $this->Form->control('fechaNacimiento');
+                    echo $this->Form->control('cedula');
+                ?>
+            </fieldset>
+            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->end() ?>
+        </div>
+    </div>
+</div>
