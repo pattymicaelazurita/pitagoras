@@ -7,11 +7,11 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Ciencium'), ['action' => 'edit', $ciencium->idCiencia], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Ciencium'), ['action' => 'delete', $ciencium->idCiencia], ['confirm' => __('Are you sure you want to delete # {0}?', $ciencium->idCiencia), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Ciencia'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Ciencium'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <h4 class="heading"><?= __('Opciones') ?></h4>
+            <?= $this->Html->link(__('Editar Ciencia'), ['action' => 'edit', $ciencium->idCiencia], ['class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('Eliminar Ciencia'), ['action' => 'delete', $ciencium->idCiencia], ['confirm' => __('¿Está seguro que desea eliminar la ciencia # {0}?', $ciencium->idCiencia), 'class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Lista de Ciencias'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Nueva Ciencia'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -23,7 +23,7 @@
                     <td><?= h($ciencium->nombre) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('IdCiencia') ?></th>
+                    <th><?= __('Id Ciencia') ?></th>
                     <td><?= $this->Number->format($ciencium->idCiencia) ?></td>
                 </tr>
             </table>

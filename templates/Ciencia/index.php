@@ -5,15 +5,15 @@
  */
 ?>
 <div class="ciencia index content">
-    <?= $this->Html->link(__('New Ciencium'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Nueva ciencia'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Ciencia') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('idCiencia') ?></th>
-                    <th><?= $this->Paginator->sort('nombre') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th><?= $this->Paginator->sort('id Ciencia') ?></th>
+                    <th><?= $this->Paginator->sort('Nombre') ?></th>
+                    <th class="actions"><?= __('Opciones') ?></th>
                 </tr>
             </thead>
             <tbody>
@@ -22,9 +22,9 @@
                     <td><?= $this->Number->format($ciencium->idCiencia) ?></td>
                     <td><?= h($ciencium->nombre) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $ciencium->idCiencia]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $ciencium->idCiencia]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $ciencium->idCiencia], ['confirm' => __('Are you sure you want to delete # {0}?', $ciencium->idCiencia)]) ?>
+                        <?= $this->Html->link(__('Ver'), ['action' => 'view', $ciencium->idCiencia]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $ciencium->idCiencia]) ?>
+                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $ciencium->idCiencia], ['confirm' => __('¿Está seguro que desea eliminar la ciencia # {0}?', $ciencium->idCiencia)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -33,12 +33,12 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('primero')) ?>
+            <?= $this->Paginator->prev('< ' . __('previo')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('siguiente') . ' >') ?>
+            <?= $this->Paginator->last(__('último') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Página {{page}} de {{pages}}')) ?></p>
     </div>
 </div>

@@ -50,11 +50,11 @@ class CienciaController extends AppController
         if ($this->request->is('post')) {
             $ciencium = $this->Ciencia->patchEntity($ciencium, $this->request->getData());
             if ($this->Ciencia->save($ciencium)) {
-                $this->Flash->success(__('The ciencium has been saved.'));
+                $this->Flash->success(__('Se ha guardado la ciencia'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The ciencium could not be saved. Please, try again.'));
+            $this->Flash->error(__('La ciencia no se ha guardado. Por favor vuelvalo a intentar'));
         }
         $this->set(compact('ciencium'));
     }
@@ -74,11 +74,11 @@ class CienciaController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $ciencium = $this->Ciencia->patchEntity($ciencium, $this->request->getData());
             if ($this->Ciencia->save($ciencium)) {
-                $this->Flash->success(__('The ciencium has been saved.'));
+                $this->Flash->success(__('Se ha actualizado la ciencia'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The ciencium could not be saved. Please, try again.'));
+            $this->Flash->error(__('La ciencia no se ha actualizado. Por favor vuelvalo a intentar'));
         }
         $this->set(compact('ciencium'));
     }
@@ -95,9 +95,9 @@ class CienciaController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $ciencium = $this->Ciencia->get($id);
         if ($this->Ciencia->delete($ciencium)) {
-            $this->Flash->success(__('The ciencium has been deleted.'));
+            $this->Flash->success(__('Se ha eliminado la ciencia'));
         } else {
-            $this->Flash->error(__('The ciencium could not be deleted. Please, try again.'));
+            $this->Flash->error(__('La ciencia no se ha eliminado. Por favor vuelvalo a intentar'));
         }
 
         return $this->redirect(['action' => 'index']);

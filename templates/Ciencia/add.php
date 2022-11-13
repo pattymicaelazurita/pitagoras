@@ -8,19 +8,19 @@
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Ciencia'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Lista de Ciencias'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
         <div class="ciencia form content">
             <?= $this->Form->create($ciencium) ?>
             <fieldset>
-                <legend><?= __('Add Ciencium') ?></legend>
+                <legend><?= __('Agregar Ciencia') ?></legend>
                 <?php
                     echo $this->Form->control('nombre');
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Agregar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>
