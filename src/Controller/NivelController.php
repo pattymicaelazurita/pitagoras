@@ -50,11 +50,11 @@ class NivelController extends AppController
         if ($this->request->is('post')) {
             $nivel = $this->Nivel->patchEntity($nivel, $this->request->getData());
             if ($this->Nivel->save($nivel)) {
-                $this->Flash->success(__('The nivel has been saved.'));
+                $this->Flash->success(__('Se ha guardado el nivel'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The nivel could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se ha podido guardar el nivel. Por favor vuelve a intentarlo'));
         }
         $this->set(compact('nivel'));
     }
@@ -74,11 +74,11 @@ class NivelController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $nivel = $this->Nivel->patchEntity($nivel, $this->request->getData());
             if ($this->Nivel->save($nivel)) {
-                $this->Flash->success(__('The nivel has been saved.'));
+                $this->Flash->success(__('Se ha actualizado el nivel'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The nivel could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se ha podido actualizar el nivel. Por favor vuelve a intentarlo'));
         }
         $this->set(compact('nivel'));
     }
@@ -95,9 +95,9 @@ class NivelController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $nivel = $this->Nivel->get($id);
         if ($this->Nivel->delete($nivel)) {
-            $this->Flash->success(__('The nivel has been deleted.'));
+            $this->Flash->success(__('Se ha eliminado el nivel'));
         } else {
-            $this->Flash->error(__('The nivel could not be deleted. Please, try again.'));
+            $this->Flash->error(__('No se ha podido eliminar el nivel. Por favor vuelve a intentarlo'));
         }
 
         return $this->redirect(['action' => 'index']);

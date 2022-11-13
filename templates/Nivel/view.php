@@ -7,11 +7,11 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Nivel'), ['action' => 'edit', $nivel->idNivel], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Nivel'), ['action' => 'delete', $nivel->idNivel], ['confirm' => __('Are you sure you want to delete # {0}?', $nivel->idNivel), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Nivel'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Nivel'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <h4 class="heading"><?= __('Opciones') ?></h4>
+            <?= $this->Html->link(__('Editar Nivel'), ['action' => 'edit', $nivel->idNivel], ['class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('Eliminar Nivel'), ['action' => 'delete', $nivel->idNivel], ['confirm' => __('¿Está seguro que desea eliminar el nivel con identificador # {0}?', $nivel->idNivel), 'class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Lista de Niveles'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Nuevo Nivel'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -27,11 +27,11 @@
                     <td><?= h($nivel->temas) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('IdNivel') ?></th>
+                    <th><?= __('Id Nivel') ?></th>
                     <td><?= $this->Number->format($nivel->idNivel) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('IdCiencia') ?></th>
+                    <th><?= __('Id Ciencia') ?></th>
                     <td><?= $this->Number->format($nivel->idCiencia) ?></td>
                 </tr>
             </table>
