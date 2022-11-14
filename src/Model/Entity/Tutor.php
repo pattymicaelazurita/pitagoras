@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Model\Entity;
 
+use Authentication\PasswordHasher\DefaultPasswordHasher;
 use Cake\ORM\Entity;
 
 /**
@@ -33,4 +34,15 @@ class Tutor extends Entity
         'fechaNacimiento' => true,
         'cedula' => true,
     ];
+
+    protected $_hidden = [
+        'password',
+    ];
+
+    protected function _setPassword($password)
+    {
+        if(strlen($password) > 0){
+            return (new DefaultPasswordHasher())->hash($password);
+        }
+    }
 }

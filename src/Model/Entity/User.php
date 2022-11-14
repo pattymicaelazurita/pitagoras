@@ -7,14 +7,16 @@ use Authentication\PasswordHasher\DefaultPasswordHasher;
 use Cake\ORM\Entity;
 
 /**
- * Administrador Entity
+ * User Entity
  *
- * @property int $idAdministrador
- * @property string $nombre
+ * @property int $id
+ * @property string $email
+ * @property string $name
  * @property string $password
- * @property string $correo
+ * @property \Cake\I18n\FrozenTime $created
+ * @property \Cake\I18n\FrozenTime $modified
  */
-class Administrador extends Entity
+class User extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -26,11 +28,18 @@ class Administrador extends Entity
      * @var array<string, bool>
      */
     protected $_accessible = [
-        'nombre' => true,
+        'email' => true,
+        'name' => true,
         'password' => true,
-        'correo' => true,
+        'created' => true,
+        'modified' => true,
     ];
 
+    /**
+     * Fields that are excluded from JSON versions of the entity.
+     *
+     * @var array<string>
+     */
     protected $_hidden = [
         'password',
     ];
