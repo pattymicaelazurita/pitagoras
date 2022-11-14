@@ -24,7 +24,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Contraseña') ?></th>
-                    <td><?= h($tutor->contrasenia) ?></td>
+                    <td><?= h($tutor->password) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Correo') ?></th>

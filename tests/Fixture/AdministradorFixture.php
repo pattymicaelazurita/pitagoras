@@ -27,7 +27,7 @@ class AdministradorFixture extends TestFixture
             [
                 'idAdministrador' => 1,
                 'nombre' => 'Lorem ipsum dolor sit amet',
-                'contrasenia' => 'Lorem ipsum dolor sit amet',
+                'password' => 'Lorem ipsum dolor sit amet',
                 'correo' => 'Lorem ipsum dolor sit amet',
             ],
         ];

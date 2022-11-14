@@ -10,7 +10,7 @@ use Cake\ORM\Entity;
  *
  * @property int $idEstudiante
  * @property string $nombre
- * @property string $contrasenia
+ * @property string $password
  * @property string $correo
  * @property \Cake\I18n\FrozenDate $fechaNacimiento
  * @property string $cedula
@@ -29,7 +29,7 @@ class Estudiante extends Entity
      */
     protected $_accessible = [
         'nombre' => true,
-        'contrasenia' => true,
+        'password' => true,
         'correo' => true,
         'fechaNacimiento' => true,
         'cedula' => true,

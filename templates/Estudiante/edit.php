@@ -23,7 +23,7 @@
                 <legend><?= __('Editar Estudiante') ?></legend>
                 <?php
                     echo $this->Form->control('nombre');
-                    echo $this->Form->control('contrasenia');
+                    echo $this->Form->control('password');
                     echo $this->Form->control('correo');
                     echo $this->Form->control('fechaNacimiento');
                     echo $this->Form->control('cedula');

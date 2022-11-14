@@ -23,7 +23,7 @@
                 <tr>
                     <td><?= $this->Number->format($administrador->idAdministrador) ?></td>
                     <td><?= h($administrador->nombre) ?></td>
-                    <td><?= h($administrador->contrasenia) ?></td>
+                    <td><?= h($administrador->password) ?></td>
                     <td><?= h($administrador->correo) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('Ver'), ['action' => 'view', $administrador->idAdministrador]) ?>

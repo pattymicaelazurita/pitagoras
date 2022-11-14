@@ -10,7 +10,7 @@ use Cake\ORM\Entity;
  *
  * @property int $idAdministrador
  * @property string $nombre
- * @property string $contrasenia
+ * @property string $password
  * @property string $correo
  */
 class Administrador extends Entity
@@ -26,7 +26,7 @@ class Administrador extends Entity
      */
     protected $_accessible = [
         'nombre' => true,
-        'contrasenia' => true,
+        'password' => true,
         'correo' => true,
     ];
 }

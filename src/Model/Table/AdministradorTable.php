@@ -57,10 +57,10 @@ class AdministradorTable extends Table
             ->notEmptyString('nombre');
 
         $validator
-            ->scalar('contrasenia')
-            ->maxLength('contrasenia', 255)
-            ->requirePresence('contrasenia', 'create')
-            ->notEmptyString('contrasenia');
+            ->scalar('password')
+            ->maxLength('password', 255)
+            ->requirePresence('password', 'create')
+            ->notEmptyString('password');
 
         $validator
             ->scalar('correo')

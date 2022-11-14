@@ -26,7 +26,7 @@
                 <tr>
                     <td><?= $this->Number->format($estudiante->idEstudiante) ?></td>
                     <td><?= h($estudiante->nombre) ?></td>
-                    <td><?= h($estudiante->contrasenia) ?></td>
+                    <td><?= h($estudiante->password) ?></td>
                     <td><?= h($estudiante->correo) ?></td>
                     <td><?= h($estudiante->fechaNacimiento) ?></td>
                     <td><?= h($estudiante->cedula) ?></td>

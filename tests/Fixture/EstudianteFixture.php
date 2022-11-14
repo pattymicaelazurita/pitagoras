@@ -27,7 +27,7 @@ class EstudianteFixture extends TestFixture
             [
                 'idEstudiante' => 1,
                 'nombre' => 'Lorem ipsum dolor sit amet',
-                'contrasenia' => 'Lorem ipsum dolor sit amet',
+                'password' => 'Lorem ipsum dolor sit amet',
                 'correo' => 'Lorem ipsum dolor sit amet',
                 'fechaNacimiento' => '2022-11-13',
                 'cedula' => 'Lorem ips',
