@@ -36,7 +36,9 @@ return [
      */
     'Datasources' => [
         'default' => [
-            'host' => 'localhost',
+
+            //CLEARDB_CRIMSON_URL: mysql://b932ca5203bf73:75edf2a8@us-cdbr-east-06.cleardb.net/heroku_517108454b278e1?reconnect=true
+            'host' => 'us-cdbr-east-06.cleardb.net',
             /*
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
@@ -44,10 +46,10 @@ return [
              */
             //'port' => 'non_standard_port_number',
 
-            'username' => 'my_app',
-            'password' => 'secret',
+            'username' => 'b932ca5203bf73',
+            'password' => '75edf2a8',
 
-            'database' => 'my_app',
+            'database' => 'heroku_517108454b278e1',
             /*
              * If not using the default 'public' schema with the PostgreSQL driver
              * set it here.
