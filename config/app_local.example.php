@@ -37,7 +37,6 @@ return [
     'Datasources' => [
         'default' => [
 
-            //CLEARDB_CRIMSON_URL: mysql://b932ca5203bf73:75edf2a8@us-cdbr-east-06.cleardb.net/heroku_517108454b278e1?reconnect=true
             'host' => 'us-cdbr-east-06.cleardb.net',
             /*
              * CakePHP will use the default DB port based on the driver selected
