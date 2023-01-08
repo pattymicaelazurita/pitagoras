@@ -45,4 +45,14 @@ class Tutor extends Entity
             return (new DefaultPasswordHasher())->hash($password);
         }
     }
+
+    public function SearchAllTutors()
+    {
+        $ic = new Conexion();
+        $sql = "SELECT * FROM tutor";
+        $mostrar = $ic->db->prepare($sql);
+        $mostrar->execute();
+        $objetoretornadotutor = $mostrar->FetchAll(PDO::FETCH_OBJ);
+        return $objetoretornadotutor;
+    }
 }

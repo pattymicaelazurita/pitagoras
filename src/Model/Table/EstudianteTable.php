@@ -7,6 +7,8 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Il8n\Time;
+use Cake\Il8n\Date;
 
 /**
  * Estudiante Model
@@ -42,6 +44,31 @@ class EstudianteTable extends Table
         $this->setPrimaryKey('idEstudiante');
     }
 
+    /*public function validarFechas($value,$context) 
+    { 
+        if (!empty($context['data']['fechaNacimiento'])) 
+        { 
+            $sd = $context['data']['fechaNacimiento']; 
+            $sd = $sd['year'].'-'.$sd['month'].'-'.$sd['day']; 
+            $ed = date(); 
+            $ed = $ed['year'].'-'.$ed['month'].'-'.$ed['day']; 
+
+            $inicio = new Date($sd); 
+            $fin = new Date($ed); 
+            
+            if ($inicio < $fin) { 
+                return true; 
+            } 
+            else 
+            { 
+                return false; 
+            } 
+        } 
+        else { 
+            return false; 
+        } 
+    }*/
+
     /**
      * Default validation rules.
      *
@@ -72,7 +99,16 @@ class EstudianteTable extends Table
         $validator
             ->date('fechaNacimiento')
             ->requirePresence('fechaNacimiento', 'create')
-            ->notEmptyDate('fechaNacimiento');
+            ->notEmptyDate('fechaNacimiento')
+            /*->add('fechaNacimiento', 
+            [ 'validarFechas'=> 
+            [ 
+                'rule'=>'validarFechas', 
+                'provider'=>'table', 
+                'message'=>'Fecha Invalida.' 
+                ] 
+                ] 
+            )*/;
 
         $validator
             ->scalar('cedula')
@@ -98,7 +134,21 @@ class EstudianteTable extends Table
     public function buildRules(RulesChecker $rules): RulesChecker
     {
         $rules->add($rules->isUnique(['correo']), ['errorField' => 'correo']);
+        
 
         return $rules;
     }
+
+    /**
+     * Has many asociation.
+     *
+     * @var array
+     */
+
+    public $hasMany = array(
+        'ProgresoEstudianteEstudiante' => array(
+            'className' => 'ProgresoTable',
+            'foreignKey' => 'idEstudiante'
+        )
+    );
 }

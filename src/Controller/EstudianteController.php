@@ -7,10 +7,12 @@ namespace App\Controller;
  * Estudiante Controller
  *
  * @property \App\Model\Table\EstudianteTable $Estudiante
+ * @property \App\Model\Table\ProgresoTable $Progreso
  * @method \App\Model\Entity\Estudiante[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class EstudianteController extends AppController
 {
+    
     /**
      * Index method
      *
@@ -37,6 +39,22 @@ class EstudianteController extends AppController
         ]);
 
         $this->set(compact('estudiante'));
+
+    }
+
+    /**
+     * Core method
+     *
+     * @param string|null $id Estudiante id.
+     * @return \Cake\Http\Response|null|void Renders core
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function core($id = null)
+    {
+        $estudiante = $this->paginate($this->Estudiante);
+
+        $this->set(compact('estudiante'));
+
     }
 
     /**
