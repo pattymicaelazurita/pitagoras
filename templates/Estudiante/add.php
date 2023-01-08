@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Estudiante $estudiante
  */
+   
 ?>
 <div class="row">
     <aside class="column">

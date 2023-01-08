@@ -19,9 +19,38 @@ class ProgresoController extends AppController
     public function index()
     {
         $progreso = $this->paginate($this->Progreso);
-
         $this->set(compact('progreso'));
+        
     }
+
+    public function reportevelocidad()
+    {
+        $progreso = $this->paginate($this->Progreso);
+        $this->set(compact('progreso'));
+        
+    }
+
+    public function identificador()
+    {
+        $progreso = $this->paginate($this->Progreso);
+        $this->set(compact('progreso'));
+        
+    }
+
+    public function identificadorreporte()
+    {
+        $progreso = $this->paginate($this->Progreso);
+        $this->set(compact('progreso'));
+        
+    }
+
+    public function core($id=2)
+    {
+        $progreso = $this->paginate($this->Progreso);
+        $this->set(compact('progreso'));
+        
+    }
+
 
     /**
      * View method
@@ -32,7 +61,7 @@ class ProgresoController extends AppController
      */
     public function view($id = null)
     {
-        $progreso = $this->Progreso->get($id, [
+        $progreso = $this->Progreso->get($id , [
             'contain' => [],
         ]);
 

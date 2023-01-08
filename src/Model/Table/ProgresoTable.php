@@ -72,4 +72,17 @@ class ProgresoTable extends Table
 
         return $validator;
     }
+
+    /**
+     * Belongs association.
+     *
+     * @var array
+     */
+
+    public $belongsTo = array(
+        'ProgresoEstudiante' => array(
+            'className' => 'EstudianteTable',
+            'foreignKey' => 'idEstudiante'
+        )
+    );
 }
